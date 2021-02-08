@@ -1,4 +1,4 @@
-FROM php:7.3-apache 
+FROM php:8.0-apache 
 RUN docker-php-ext-install mysqli pdo_mysql
 RUN apt-get update \
     && apt-get install -y libzip-dev \
