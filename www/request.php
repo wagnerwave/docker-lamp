@@ -1,21 +1,29 @@
 <?php
 
 // Connexion et sélection de la base
-$conn = mysqli_connect('db', 'user', 'test', "myDb");
+$mysqli = new mysqli('db', 'user', 'test', "Database");
+
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
 
 $username = $_POST['username'];
-$query = "SELECT * FROM User WHERE name='$username'";
 
-$result = mysqli_query($conn, $query);
+$result = $mysqli->query($query = "SELECT * FROM User WHERE name='$username'");
 
-if ($result) {
-    echo 'password = EPITECH_RENNES{GG_YOU_WIN_THIS_CHALL_TO_EZ_FOR_U}';
-} else {
+$row_cnt = $result->num_rows;
+
+if ($row_cnt == 0) {
     header("Location: http://0.0.0.0:8001/index.html");
+} else {
+    echo '<center><h1>Connected</h1></center>';
+    echo '';
+    var_dump($result);
 }
 
 /* Libération du jeu de résultats */
 
-mysqli_close($conn);
+$mysqli->close();
 
 ?>

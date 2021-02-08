@@ -15,7 +15,7 @@ CREATE TABLE `User` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-INSERT INTO `User` (`id`, `name`) VALUES
+INSERT INTO `User` (`id`, `name`, `password`) VALUES
 (1, 'admin', 'YWRtaW4='),
 (2, 'user', 'MTIzNA=='),
 (3, 'John-the-retard', 'whatisapassword???');
