@@ -22,5 +22,6 @@ Enjoy !
 
 # Injection SQL Workshop
 
-Open web browser to look at simple from at  [http://localhost:8001](http://localhost:8001)
-Try to understand why, this code containt a code failure.
+- Open web browser to look at simple from at  [http://localhost:8001](http://localhost:8001)
+
+- Try to understand why, this code containt a code failure.
