@@ -24,4 +24,4 @@ Enjoy !
 
 - Open web browser to look at simple from at  [http://localhost:8001](http://localhost:8001)
 
-- Try to understand why, this code containt a code failure.
+- Try to understand why, this code containt a code failure, and try to make a injectin sql.
