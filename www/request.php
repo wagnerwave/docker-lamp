@@ -11,14 +11,12 @@ if (mysqli_connect_errno()) {
 $username = $_POST['username'];
 $result = $mysqli->query($query = "SELECT * FROM User WHERE name='$username'");
 
-$row_cnt = $result->num_rows;
-
-if ($row_cnt == 0) {
-    header("Location: http://0.0.0.0:8001/index.html");
-} else {
+if ($result !== false && $result->num_rows > 0) {
     echo '<center><h1>Connected</h1></center>';
     echo '';
     var_dump($result);
+} else {
+    header("Location: http://0.0.0.0:8001/index.html");
 }
 
 /* Libération du jeu de résultats */
