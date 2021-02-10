@@ -9,7 +9,6 @@ if (mysqli_connect_errno()) {
 }
 
 $username = $_POST['username'];
-echo "Welcome : $username";
 $result = $mysqli->query($query = "SELECT * FROM User WHERE name='$username'");
 
 $row_cnt = $result->num_rows;
